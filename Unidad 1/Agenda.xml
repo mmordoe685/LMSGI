@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+    <contacto>
+        <nombre>Juan</nombre>
+        <apellidos>Pérez García</apellidos>
+        <direccion>
+            <calle>Calle Falsa 123</calle>
+            <ciudad>Ciudad Ejemplo</ciudad>
+            <codigo_postal>12345</codigo_postal>
+        </direccion>
+        <telefonos>
+            <telefono tipo="casa">123-456-789</telefono>
+            <telefono tipo="movil">987-654-321</telefono>
+            <telefono tipo="trabajo">555-123-456</telefono>
+        </telefonos>
+    </contacto>
+    <contacto>
+        <nombre>María</nombre>
+        <apellidos>López Martínez</apellidos>
+        <direccion>
+            <calle>Avenida Siempre Viva 742</calle>
+            <ciudad>Otra Ciudad</ciudad>
+            <codigo_postal>54321</codigo_postal>
+        </direccion>
+        <telefonos>
+            <telefono tipo="casa">111-222-333</telefono>
+            <telefono tipo="movil">444-555-666</telefono>
+            <telefono tipo="trabajo">777-888-999</telefono>
+        </telefonos>
+    </contacto>
+</agenda>

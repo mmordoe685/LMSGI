@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="styles.css"?>
+   <catalogo>
+       <libro>
+           <titulo> Clean Code </titulo>
+           <autor> Robert C. Martin </autor>
+           <año> 2008 </año>
+           <editorial> Prentice Hall </editorial>
+       </libro>
+	    <libro>
+           <titulo> Cluedo </titulo>
+           <autor> Maria Dolores </autor>
+           <año> 2007 </año>
+           <editorial> Edelvives </editorial>
+       </libro>
+	    <libro>
+           <titulo> Avatar </titulo>
+           <autor> Pablo Picasso </autor>
+           <año> 2012 </año>
+           <editorial> Agostini </editorial>
+       </libro>
+	    <libro>
+           <titulo> Ordenadores vol.3 </titulo>
+           <autor> Mondongo Garcia </autor>
+           <año> 1808 </año>
+           <editorial> Jhua </editorial>
+       </libro>
+   </catalogo>

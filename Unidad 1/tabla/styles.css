@@ -1,0 +1,34 @@
+/* Estilos para el archivo XML */
+hardwareCatalog {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+item {
+    display: block;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+id {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+type {
+    color: blue;
+}
+
+brand {
+    color: green;
+}
+
+model {
+    color: purple;
+}
+
+specifications {
+    font-style: italic;
+}

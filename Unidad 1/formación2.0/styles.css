@@ -1,0 +1,32 @@
+
+modulo {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+alumno {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+alumno h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #007BFF;
+}
+
+direccion {
+    font-style: italic;
+    color: #555;
+}
+
+faltas_asistencia, notas {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+}

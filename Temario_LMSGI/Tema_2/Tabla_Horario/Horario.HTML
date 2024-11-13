@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333333; 
+            color: white;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #555555;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        td {
+            background-color: #444444;
+        }
+
+        /* Estilos para la tabla de horas */
+        .horas-table {
+            border-collapse: collapse;
+            border: 2px solid #444444;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: #444444;
+            margin-right: 5px; /* Espaciado entre las dos tablas */
+        }
+
+        .horas-table th, .horas-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #444444;
+        }
+
+        .horas-table th {
+            background-color: #555555;
+        }
+
+        /* Estilos para la tabla principal */
+        .main-table {
+            border-collapse: collapse;
+            width: 80%;
+            border: 2px solid #444444;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: #444444;
+        }
+
+        .main-table th, .main-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #444444;
+        }
+
+        .main-table th {
+            background-color: #555555;
+        }
+
+        /* Contenedor para alinear las tablas */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Tabla de horas -->
+        <table class="horas-table">
+            <tr>
+                <th>HORAS</th>
+            </tr>
+            <tr>
+                <td>8:30//9:30</td>
+            </tr>
+            <tr>
+                <td>9:30//10:30</td>
+            </tr>
+            <tr>
+                <td>10:30//11:30</td>
+            </tr>
+            <tr>
+                <td>12:00//13:00</td>
+            </tr>
+            <tr>
+                <td>13:00//14:00</td>
+            </tr>
+            <tr>
+                <td>14:00//15:00</td>
+            </tr>
+        </table>
+
+        <!-- Tabla principal con las asignaturas -->
+        <table class="main-table">
+            <tr>
+                <th>LUNES</th>
+                <th>MARTES</th>
+                <th>MIERCOLES</th>
+                <th>JUEVES</th>
+                <th>VIERNES</th>
+            </tr>
+            <tr>
+                <td>ENDES</td>
+                <td>ING</td>
+                <td>LMSGI</td>
+                <td>SIINF</td>
+                <td>SAS</td>
+            </tr>
+            <tr>
+                <td>PROGR</td>
+                <td>DAS</td>
+                <td>ENDES</td>
+                <td>ENDES</td>
+                <td>IPE</td>
+            </tr>
+            <tr>
+                <td>PROGR</td>
+                <td>IPE</td>
+                <td>SIINF</td>
+                <td>PROGR</td>
+                <td>PROGR</td>
+            </tr>
+            <tr>
+                <td>BADAT</td>
+                <td>BADAT</td>
+                <td>SIINF</td>
+                <td>PROGR</td>
+                <td>PROGR</td>
+            </tr>
+            <tr>
+                <td>BADAT</td>
+                <td>BADAT</td>
+                <td>BADAT</td>
+                <td>IPE</td>
+                <td>SIINF</td>
+            </tr>
+            <tr>
+                <td>ING</td>
+                <td>LMSGI</td>
+                <td>BADAT</td>
+                <td>LMSGI</td>
+                <td>SIINF</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

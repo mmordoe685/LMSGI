@@ -1,0 +1,105 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+header {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+nav {
+    width: 100%;
+    background-color: #eaeaea;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.noticias, .contenido, aside {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.noticias ul, aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.noticias ul li, aside ul li {
+    margin-bottom: 10px;
+}
+
+.noticias ul li a, aside ul li a {
+    text-decoration: none;
+    color: #007acc;
+}
+
+.noticias ul li a:hover, aside ul li a:hover {
+    text-decoration: underline;
+}
+
+.contenido article {
+    margin-bottom: 20px;
+}
+
+.contenido .imagen, aside .imagen {
+    width: 100%;
+    height: 150px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+}
+
+aside article {
+    margin-bottom: 20px;
+}
+
+aside article h2 {
+    font-size: 1.2em;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #eaeaea;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}

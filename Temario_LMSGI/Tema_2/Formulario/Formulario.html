@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba formularios</title>
+    <style>
+        body {
+            background-color: bisque;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-container {
+            width: 100%; /* Abarca todo el ancho de la página */
+            padding: 50px 0; /* Espacio alrededor del formulario */
+            display: flex;
+            justify-content: center;
+        }
+        table {
+            width: 100%; /* La tabla ocupa todo el ancho disponible */
+            border: 2px solid black;
+        }
+        td {
+            background-color: lightblue;
+            padding: 30px; /* Espaciado dentro de las celdas */
+            text-align: left;
+        }
+        form {
+            width: 100%;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%; /* Los campos de texto ocupan todo el ancho disponible */
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box; /* Para que el padding no afecte al tamaño total */
+        }
+    </style>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <div class="form-container">
+        <table>
+            <tr>
+                <td>
+                    <form action="">
+                        <p>
+                            Teléfono:
+                            <input type="text" name="tlf" size="11" maxlength="9" value="806526526">
+                            <br><br>
+                            Edad:
+                            <input type="text" name="edad" size="14" maxlength="3" value="30">
+                            <br><br>
+                            Población:
+                            <input type="text" name="pobla" size="10" maxlength="30" value="Triana">
+                            <br><br>
+                            Contraseña (6-12 digitos):
+                            <input type="password" name="clave" size="10" minlength="6" maxlength="12" value="">
+                            Seleccione su secso:
+                            <input type="radio" name="secso" value="Masculino">Masculino
+                            <input type="radio" name="secso" value="Femenino">Femenino
+                            <br><br>
+                            Elige su motivo:
+                            <select name="Motivos">
+                                <option value="Comprar pipas">Comprar pipas</option>
+                                <option value="Comprar un coche"> Comprar un coche</option>
+                                <option value="Ir al baño">Ir al baño</option>
+                                <option value="Ponme un 10">Ponme un 10</option>
+                                <option value="Me lo he ganao">Me lo he ganao</option>
+                            </select>
+                            <br><br>
+                            <input type="submit" value="Enviar" name="Enviar">
+                            <input type="reset" value="Resetear" name="Resetear">
+                        
+                        </p>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

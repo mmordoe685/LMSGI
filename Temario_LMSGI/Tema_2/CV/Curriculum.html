@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f3f4f6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0077ff, #00ff88);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid #0077ff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header .photo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 15px;
+        }
+
+        .cv-container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        aside.sidebar {
+            background: linear-gradient(135deg, #ff6b6b, #ffcc00);
+            color: white;
+            padding: 30px 20px;
+            width: 35%;
+            text-align: left;
+        }
+
+        aside.sidebar h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+        }
+
+        aside.sidebar p, 
+        aside.sidebar ul {
+            margin: 0 0 20px;
+            line-height: 1.8;
+        }
+
+        aside.sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside.sidebar ul li {
+            margin-bottom: 10px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        aside.sidebar ul li:before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #ffcc00;
+        }
+
+        main.main-content {
+            padding: 30px 20px;
+            width: 65%;
+            background: #f9f9f9;
+        }
+
+        main h2 {
+            font-size: 1.8rem;
+            color: #0077ff;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #00ff88;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        main .experience h3 {
+            font-size: 1.4rem;
+            margin: 10px 0;
+            color: #00cc55;
+        }
+
+        main .experience p {
+            margin: 0 0 15px;
+            color: #555;
+        }
+
+        main ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        main ul li {
+            background: #0077ff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #00ff88;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer p a {
+            color: #00ccff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="flex">
+        <div class="photo">
+            <img src="mclovin.jpg" alt="Foto">
+        </div>
+        <h1>Marcos Morales Doello</h1>
+        <p class="job-title">Desarrollador Web</p>
+    </header>
+
+    <div class="cv-container flex">
+        <aside class="sidebar">
+            <section class="section">
+                <h2>Formación</h2>
+                <p>Bachillerato Tecnológico</p>
+                <p>Grado elemental de música</p>
+            </section>
+
+            <section class="additional-info">
+                <h2>Información</h2>
+                <ul>
+                    <li>Carnet de conducir (en proceso)</li>
+                    <li>Soltura frente al publico</li>
+                    <li>Aprendo rapido lo que sea</li>
+                </ul>
+            </section>
+            <section class="section">
+                <h2>Personal</h2>
+                <p>Gusto particular por el deporte de agua y la música. 
+                    Practico submarinismo y actualmente estudio batería
+                    con experiencia de 3 años</p>
+                
+            </section>
+        </aside>
+
+        <main class="main-content">
+            <section class="section">
+                <h2>Experiencia</h2>
+                <div class="experience">
+                    <h3>Peón de obra</h3>
+                    <p>Experiencia en el la obra por 2 años</p>
+                </div>
+                <div class="experience">
+                    <h3>Mozo de mudanzas</h3>
+                    <p>Experiencia en las mudanzas por 1 año</p>
+                </div>
+                <div class="experience">
+                    <h3>Camarero Barra/Mesa</h3>
+                    <p>Experiencia como camarero por 2 años</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Herramientas</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Python</li>
+                </ul>
+                <ul>
+                    <li>Pragmatico</li>
+                    <li>Sociable</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Idiomas</h2>
+                <p>Español, Inglés</p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="flex">
+        <section class="contact-info">
+            <h2>Contacto</h2>
+            <p>📞 639-61-56-65</p>
+            <p>✉️ mmordoe685@g.educaand.es</p>
+            <iframe width="560" height="315" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.9155022837585!2d-6.2586510234611215!3d36.60434407230366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dd013aa5a32eb%3A0x7963d14f1d0fecce!2sC.%20Cuatro%20Pinos%2C%204%2C%2011500%20El%20Puerto%20de%20Sta%20Mar%C3%ADa%2C%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1733302543641!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3R94lwpe8ns?si=nHPmvWg7kh1eIDFM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </footer>
+</body>
+</html>

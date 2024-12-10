@@ -4,32 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Índice de Ejercicios - Lenguaje de Marcas 1 DAW</title>
+    <style>
+        /* Estilo general del cuerpo de la página */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-color: #d2a7e6; /* Fondo morado */
+        }
+
+        /* Estilo para los recuadro */
+        .recuadro {
+            background-color: rgb(117, 141, 245);
+            border: 2px solid #000000; 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        .cuadrito1, .cuadrito2 {
+            background-color: rgb(153, 127, 223);
+            border: 2px solid #000000; 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+        .article{
+            background-color: rgb(153, 127, 223);
+            border: 2px solid #000000; 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 10%;
+            max-width: 800px;
+            text-align: right;
+        }
+
+        .Todo{
+            display:flex;
+            justify-content: center;
+                    
+
+
+        }
+
+        /* Estilo del encabezado */
+        header h1, nav {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Estilo de los enlaces */
+        a {
+            text-decoration: none;
+            color: #00eeff; /* Color azul para los enlaces */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        footer{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <h1>Marcos Morales Doello</h1>
-        <h2>Lenguaje de Marcas 1 DAW</h2>
     </header>
-
-    <main>
+    <nav>  
+        <h2>Lenguaje de Marcas 1 DAW</h2>
+    </nav>
+    <div class="Todo">
+    <div class="recuadro">
         <section>
-            <h3>TEMA 1: Introducción al lenguaje de marcas</h3>
-            <ul>
-                <li><a href="Temario_LMSGI/Tema_1/Articulos/Artículos.xml">Ejercicio_Articulos</a></li>
-                <li><a href="Temario_LMSGI/Tema_1/fechas/Fechas.xml">Ejercicio_Fechas</a></li>
-                <li><a href="Temario_LMSGI/Tema_1/Libros/programmingCatalogMarcosMorales.xml">Ejercicio_Libros</a></li>
-            </ul>
+            <div class="cuadrito1">
+            <article>
+                <h3>TEMA 1: Introducción al lenguaje de marcas</h3>
+                <ul>
+                    <li><a href="Temario_LMSGI/Tema_1/Articulos/Artículos.xml">Ejercicio_Articulos</a></li>
+                    <li><a href="Temario_LMSGI/Tema_1/fechas/Fechas.xml">Ejercicio_Fechas</a></li>
+                    <li><a href="Temario_LMSGI/Tema_1/Libros/programmingCatalogMarcosMorales.xml">Ejercicio_Libros</a></li>
+                </ul>
+            </article>
+            </div>
+<br><br>
+            <div class="cuadrito2">
+            <article>
+                <h3>TEMA 2: HTML</h3>
+                <ul>
+                    <li><a href="Temario_LMSGI/Tema_2/LISTA/Lista.html"> Listas </a></li>
+                    <li><a href="Temario_LMSGI/Tema_2/Tabla_Horario/Horario.HTML">Horario </a></li>
+                </ul>
+            </article>
+            </div>
         </section>
+    </div>
+    <div class="article">
 
-        <section>
-            <h3>TEMA 2: HTML</h3>
-            <ul>
-                <li><a href="Temario_LMSGI/Tema_2/LISTA/Lista.html">Ejercicio 1: Listas (Enlace a otra página)</a></li>
-                <li><a href="Temario_LMSGI/Tema_2/Tabla_Horario/Horario.HTML">Ejercicio 2: Horario (Enlace a otra página)</a></li>
-            </ul>
-        </section>
-    </main>
 
+    </div>
+    </div>
+    <br><br>
+    <footer>
+        <b>mmordoe685@g.educaand.es</b>
+        <b>27/11/2024</b>
+    </footer>
+    
 </body>
 </html>

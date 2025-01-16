@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- Vincula el archivo de estilos CSS externo -->
+    <link rel="stylesheet" href="item.css">
+</head>
+<body>
+    <!-- Contenedor principal de la calculadora -->
+    <div id="container" class="container">
+        <!-- Sección para mostrar los resultados -->
+        <div class="result">
+            <h1>0</h1> <!-- Muestra el valor actual, por defecto es "0" -->
+        </div>
+
+        <!-- Contenedor para los botones de la calculadora -->
+        <div class="numbers">
+            <!-- Fila 1: Botón de reinicio, paréntesis y operadores -->
+            <div id="off-btn" class="item" style="background-color: rgb(139, 48, 48);">AC</div> <!-- Botón para reiniciar -->
+            <div class="item" style="background-color: rgb(167, 127, 127);">( )</div> <!-- Botón para paréntesis -->
+            <div class="item" style="background-color: rgb(167, 127, 127);">%</div> <!-- Botón para porcentaje -->
+            <div class="item" style="background-color: rgb(167, 127, 127);">÷</div> <!-- Botón para división -->
+
+            <!-- Fila 2: Números 7, 8, 9 y operador multiplicar -->
+            <div class="item" style="background-color: rgb(56, 56, 56);">7</div>
+            <div class="item" style="background-color: rgb(56, 56, 56);">8</div>
+            <div class="item" style="background-color: rgb(56, 56, 56);">9</div>
+            <div class="item" style="background-color: rgb(167, 127, 127);">x</div> <!-- Botón para multiplicar -->
+
+            <!-- Fila 3: Números 4, 5, 6 y operador restar -->
+            <div class="item" style="background-color: rgb(56, 56, 56);">4</div>
+            <div class="item" style="background-color: rgb(56, 56, 56);">5</div>
+            <div class="item" style="background-color: rgb(56, 56, 56);">6</div>
+            <div class="item" style="background-color: rgb(167, 127, 127);">-</div> <!-- Botón para restar -->
+
+            <!-- Fila 4: Números 1, 2, 3 y operador sumar -->
+            <div class="item" style="background-color: rgb(56, 56, 56);">1</div>
+            <div class="item" style="background-color: rgb(56, 56, 56);">2</div>
+            <div class="item" style="background-color: rgb(56, 56, 56);">3</div>
+            <div class="item" style="background-color: rgb(167, 127, 127);">+</div> <!-- Botón para sumar -->
+
+            <!-- Fila 5: Botones adicionales: 0, coma, borrar y calcular -->
+            <div class="item" style="background-color: rgb(56, 56, 56);">0</div> <!-- Número 0 -->
+            <div class="item" style="background-color: rgb(56, 56, 56);">,</div> <!-- Botón para coma decimal -->
+            <div class="item" style="background-color: rgb(56, 56, 56);">⌫</div> <!-- Botón para borrar -->
+            <div class="item" style="background-color: rgb(139, 48, 48);">=</div> <!-- Botón para calcular el resultado -->
+        </div>
+    </div>
+</body>
+</html>

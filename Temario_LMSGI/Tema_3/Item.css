@@ -1,0 +1,58 @@
+/* Importa la fuente "Inter" desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Configuración básica para html y body */
+html, body {
+    font-family: "Inter", sans-serif; /* Aplica la fuente "Inter" a todo el documento */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
+    width: 100%; /* Ocupa todo el ancho de la ventana */
+    height: 100%; /* Ocupa todo el alto de la ventana */
+    display: flex; /* Establece el diseño flexible */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    color: white; /* Define el color del texto */
+}
+
+/* Estilo principal del contenedor */
+.container {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 100%; /* Ocupa todo el alto disponible */
+    background-color: rgb(22, 22, 22); /* Fondo oscuro para contraste */
+    display: flex; /* Diseño flexible */
+    flex-direction: column; /* Coloca los elementos en una columna */
+}
+
+/* Sección que muestra los resultados */
+.result {
+    width: 100%; /* Ocupa todo el ancho */
+    height: 30%; /* Ocupa el 30% de la altura del contenedor */
+    display: flex; /* Diseño flexible */
+    justify-content: end; /* Alinea el contenido al final horizontalmente */
+    align-items: end; /* Alinea el contenido al final verticalmente */
+}
+
+/* Estilo del texto de resultados */
+.result h1 {
+    margin: 20px; /* Espaciado alrededor del texto */
+    font-size: 100px; /* Tamaño de fuente grande para visibilidad */
+}
+
+/* Contenedor para los botones */
+.numbers {
+    width: 100%; /* Ocupa todo el ancho */
+    height: 70%; /* Ocupa el 70% de la altura del contenedor */
+    display: grid; /* Usa diseño de cuadrícula */
+    grid-template-columns: repeat(4, 1fr); /* Divide en 4 columnas iguales */
+    grid-template-rows: repeat(5, 1fr); /* Divide en 5 filas iguales */
+}
+
+/* Estilo individual de los botones */
+.item {
+    background-color: orange; /* Color de fondo de los botones */
+    border-radius: 30px; /* Bordes redondeados */
+    display: grid; /* Centra el contenido */
+    place-items: center; /* Centra horizontal y verticalmente */
+    margin: 5px; /* Espaciado entre botones */
+    font-size: 30px; /* Tamaño de fuente grande para botones */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}

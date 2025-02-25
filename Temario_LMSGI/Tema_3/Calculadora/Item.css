@@ -1,58 +1,105 @@
 /* Importa la fuente "Inter" desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
 
-/* Configuración básica para html y body */
+/* Configuración básica */
 html, body {
-    font-family: "Inter", sans-serif; /* Aplica la fuente "Inter" a todo el documento */
-    margin: 0; /* Elimina los márgenes predeterminados */
-    padding: 0; /* Elimina el relleno predeterminado */
-    width: 100%; /* Ocupa todo el ancho de la ventana */
-    height: 100%; /* Ocupa todo el alto de la ventana */
-    display: flex; /* Establece el diseño flexible */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    color: white; /* Define el color del texto */
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212; /* Fondo oscuro elegante */
+    color: white;
 }
 
-/* Estilo principal del contenedor */
+/* Contenedor principal */
 .container {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    height: 100%; /* Ocupa todo el alto disponible */
-    background-color: rgb(22, 22, 22); /* Fondo oscuro para contraste */
-    display: flex; /* Diseño flexible */
-    flex-direction: column; /* Coloca los elementos en una columna */
+    width: 350px;
+    height: 500px;
+    background: #1e1e1e; /* Fondo gris oscuro */
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-/* Sección que muestra los resultados */
+/* Pantalla de resultados */
 .result {
-    width: 100%; /* Ocupa todo el ancho */
-    height: 30%; /* Ocupa el 30% de la altura del contenedor */
-    display: flex; /* Diseño flexible */
-    justify-content: end; /* Alinea el contenido al final horizontalmente */
-    align-items: end; /* Alinea el contenido al final verticalmente */
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Estilo del texto de resultados */
 .result h1 {
-    margin: 20px; /* Espaciado alrededor del texto */
-    font-size: 100px; /* Tamaño de fuente grande para visibilidad */
+    margin: 0;
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: right;
 }
 
-/* Contenedor para los botones */
+/* Contenedor de botones */
 .numbers {
-    width: 100%; /* Ocupa todo el ancho */
-    height: 70%; /* Ocupa el 70% de la altura del contenedor */
-    display: grid; /* Usa diseño de cuadrícula */
-    grid-template-columns: repeat(4, 1fr); /* Divide en 4 columnas iguales */
-    grid-template-rows: repeat(5, 1fr); /* Divide en 5 filas iguales */
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
-/* Estilo individual de los botones */
+/* Estilo de los botones */
 .item {
-    background-color: orange; /* Color de fondo de los botones */
-    border-radius: 30px; /* Bordes redondeados */
-    display: grid; /* Centra el contenido */
-    place-items: center; /* Centra horizontal y verticalmente */
-    margin: 5px; /* Espaciado entre botones */
-    font-size: 30px; /* Tamaño de fuente grande para botones */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    background-color: #333;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: white;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
+
+/* Estilos específicos para operadores */
+.item:nth-child(4n) { background-color: #ff9500; } /* Operadores en naranja */
+.item:nth-child(4n):hover { background-color: #d87c00; }
+
+/* Botón AC y = */
+#off-btn, .item:last-child {
+    background-color: #ff3b30;
+    color: white;
+}
+
+#off-btn:hover, .item:last-child:hover {
+    background-color: #d32f2f;
+}
+
+/* Botón de borrar */
+.item:nth-last-child(2) {
+    background-color: #555;
+}
+.item:nth-last-child(2):hover {
+    background-color: #777;
+}
+
+/* Números */
+.item:not(:nth-child(4n)) {
+    background-color: #444;
+}
+.item:not(:nth-child(4n)):hover {
+    background-color: #555;
+}
+    

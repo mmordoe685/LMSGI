@@ -1,126 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Índice de Ejercicios - Lenguaje de Marcas 1 DAW</title>
     <style>
         /* Estilo general del cuerpo de la página */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             height: 100vh;
-            background-color: #d2a7e6; /* Fondo morado */
-        }
-
-        /* Estilo para los recuadro */
-        .recuadro {
-            background-color: rgb(117, 141, 245);
-            border: 2px solid #000000; 
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 800px;
-            text-align: center;
+            background-color: #f4f4f9; /* Fondo más suave */
             display: flex;
-            justify-content: center;
-        }
-        .cuadrito1, .cuadrito2 {
-            background-color: rgb(153, 127, 223);
-            border: 2px solid #000000; 
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 800px;
-            text-align: center;
-        }
-        .article{
-            background-color: rgb(153, 127, 223);
-            border: 2px solid #000000; 
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 10%;
-            max-width: 800px;
-            text-align: right;
-        }
-
-        .Todo{
-            display:flex;
-            justify-content: center;
-                    
-
-
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         /* Estilo del encabezado */
-        header h1, nav {
+        header {
+            background-color: #4b3f72; /* Fondo oscuro */
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
             margin: 0;
-            padding: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background-color: #343a40; /* Fondo de navegación */
+            color: #ffffff;
+            padding: 10px;
             text-align: center;
         }
 
-        /* Estilo de los enlaces */
-        a {
-            text-decoration: none;
-            color: #00eeff; /* Color azul para los enlaces */
+        nav h2 {
+            margin: 0;
+            font-size: 1.5em;
         }
 
-        a:hover {
+        /* Contenedor para los recuadros */
+        .content-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        /* Estilo de los recuadros */
+        .recuadro {
+            background-color: #ffffff;
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            margin: 10px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .recuadro:hover {
+            transform: scale(1.05); /* Efecto al pasar el ratón */
+        }
+
+        h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            color: #4b3f72;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
             text-decoration: underline;
         }
-        footer{
-            margin: 0;
-            padding: 0;
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
             text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer b {
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            /* En pantallas pequeñas, hacer los recuadros de 100% de ancho */
+            .recuadro {
+                width: 100%;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header>
         <h1>Marcos Morales Doello</h1>
     </header>
-    <nav>  
+
+    <nav>
         <h2>Lenguaje de Marcas 1 DAW</h2>
     </nav>
-    <div class="Todo">
-    <div class="recuadro">
-        <section>
-            <div class="cuadrito1">
-            <article>
+
+    <div class="content-container">
+
+        <div class="recuadro">
+            <section>
                 <h3>TEMA 1: Introducción al lenguaje de marcas</h3>
                 <ul>
-                    <li><a href="Temario_LMSGI/Tema_1/Articulos/Artículos.xml">Ejercicio_Articulos</a></li>
-                    <li><a href="Temario_LMSGI/Tema_1/fechas/Fechas.xml">Ejercicio_Fechas</a></li>
-                    <li><a href="Temario_LMSGI/Tema_1/Libros/programmingCatalogMarcosMorales.xml">Ejercicio_Libros</a></li>
+                    <li><a href="Temario_LMSGI/Tema_1/Articulos/Artículos.xml" target="_blank">Ejercicio_Articulos</a></li>
+                    <li><a href="Temario_LMSGI/Tema_1/fechas/Fechas.xml" target="_blank">Ejercicio_Fechas</a></li>
+                    <li><a href="Temario_LMSGI/Tema_1/Libros/programmingCatalogMarcosMorales.xml" target="_blank">Ejercicio_Libros</a></li>
                 </ul>
-            </article>
-            </div>
-<br><br>
-            <div class="cuadrito2">
-            <article>
+            </section>
+        </div>
+
+        <div class="recuadro">
+            <section>
                 <h3>TEMA 2: HTML</h3>
                 <ul>
-                    <li><a href="Temario_LMSGI/Tema_2/LISTA/Lista.html"> Listas </a></li>
-                    <li><a href="Temario_LMSGI/Tema_2/Tabla_Horario/Horario.HTML">Horario </a></li>
+                    <li><a href="Temario_LMSGI/Tema_2/LISTA/Lista.html" target="_blank">Listas</a></li>
+                    <li><a href="Temario_LMSGI/Tema_2/Tabla_Horario/Horario.HTML" target="_blank">Horario</a></li>
                 </ul>
-            </article>
-            </div>
-        </section>
-    </div>
-    <div class="article">
-
+            </section>
+        </div>
 
     </div>
-    </div>
-    <br><br>
+
     <footer>
-        <b>mmordoe685@g.educaand.es</b>
-        <b>27/11/2024</b>
+        <b>mmordoe685@g.educaand.es</b> | <b>27/11/2024</b>
     </footer>
-    
+
 </body>
+
 </html>

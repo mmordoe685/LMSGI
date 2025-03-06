@@ -6,76 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Índice de Ejercicios - Lenguaje de Marcas 1 DAW</title>
+    <!-- Fuente moderna y profesional -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilo general del cuerpo de la página */
-        body {
+        /* Reset básico para asegurar consistencia entre navegadores */
+        * {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            height: 100vh;
-            background-color: #f4f4f9; /* Fondo más suave */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Estilo del encabezado */
-        header {
-            background-color: #4b3f72; /* Fondo oscuro */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #34495e); /* Degradado elegante */
             color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Contenedor principal que centraliza todo */
+        .main-container {
+            background-color: #ffffff;
+            color: #333333;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra suave */
+            max-width: 900px;
+            width: 90%;
+            padding: 40px;
             text-align: center;
-            padding: 20px 0;
+        }
+
+        header {
+            background-color: transparent;
+            margin-bottom: 40px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 2.8rem;
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
 
         nav {
-            background-color: #343a40; /* Fondo de navegación */
-            color: #ffffff;
-            padding: 10px;
-            text-align: center;
+            background-color: transparent;
+            color: #2c3e50;
+            margin-bottom: 40px;
         }
 
         nav h2 {
-            margin: 0;
-            font-size: 1.5em;
+            font-size: 1.8rem;
+            font-weight: 500;
         }
 
-        /* Contenedor para los recuadros */
+        /* Estilo de las tarjetas de contenido */
         .content-container {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 20px;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        /* Estilo de los recuadros */
         .recuadro {
-            background-color: #ffffff;
-            border: 2px solid #ccc;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 45%;
-            margin: 10px;
-            transition: transform 0.2s ease-in-out;
+            background-color: #f7f9fc;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
         }
 
         .recuadro:hover {
-            transform: scale(1.05); /* Efecto al pasar el ratón */
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Mayor sombra al hacer hover */
         }
 
         h3 {
-            font-size: 1.6em;
+            font-size: 1.6rem;
             margin-bottom: 15px;
-            color: #4b3f72;
+            color: #34495e;
         }
 
         ul {
-            list-style: none;
-            padding-left: 0;
+            list-style-type: none;
+            padding: 0;
         }
 
         ul li {
@@ -83,7 +98,8 @@
         }
 
         ul li a {
-            color: #007bff;
+            color: #3498db;
+            font-weight: 500;
             text-decoration: none;
         }
 
@@ -92,21 +108,26 @@
         }
 
         footer {
-            background-color: #343a40;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
+            margin-top: 40px;
+            color: #95a5a6;
         }
 
         footer b {
-            font-size: 1.1em;
+            color: #2c3e50;
         }
 
+        /* Estilo responsive para móviles */
         @media (max-width: 768px) {
-            /* En pantallas pequeñas, hacer los recuadros de 100% de ancho */
             .recuadro {
                 width: 100%;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            nav h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -114,61 +135,58 @@
 
 <body>
 
-    <header>
-        <h1>Marcos Morales Doello</h1>
-    </header>
+    <div class="main-container">
+        <header>
+            <h1>Marcos Morales Doello</h1>
+        </header>
 
-    <nav>
-        <h2>Lenguaje de Marcas 1 DAW</h2>
-    </nav>
+        <nav>
+            <h2>Lenguaje de Marcas 1 DAW</h2>
+        </nav>
 
-    <div class="content-container">
+        <div class="content-container">
+            <!-- Tema 1 -->
+            <div class="recuadro">
+                <section>
+                    <h3>TEMA 1: Introducción al lenguaje de marcas</h3>
+                    <ul>
+                        <li><a href="Temario_LMSGI/Tema_1/Articulos/Artículos.xml" target="_blank">Artículos</a></li>
+                        <li><a href="Temario_LMSGI/Tema_1/fechas/Fechas.xml" target="_blank">Fechas</a></li>
+                        <li><a href="Temario_LMSGI/Tema_1/Libros/programmingCatalogMarcosMorales.xml" target="_blank">Libros</a></li>
+                    </ul>
+                </section>
+            </div>
 
-        <!-- Tema 1 -->
-        <div class="recuadro">
-            <section>
-                <h3>TEMA 1: Introducción al lenguaje de marcas</h3>
-                <ul>
-                    <li><a href="Temario_LMSGI/Tema_1/Articulos/Artículos.xml" target="_blank">Articulos</a></li>
-                    <li><a href="Temario_LMSGI/Tema_1/fechas/Fechas.xml" target="_blank">Fechas</a></li>
-                    <li><a href="Temario_LMSGI/Tema_1/Libros/programmingCatalogMarcosMorales.xml" target="_blank">Libros</a></li>
-                </ul>
-            </section>
+            <!-- Tema 2 -->
+            <div class="recuadro">
+                <section>
+                    <h3>TEMA 2: HTML</h3>
+                    <ul>
+                        <li><a href="Temario_LMSGI/Tema_2/LISTA/Lista.html" target="_blank">Listas</a></li>
+                        <li><a href="Temario_LMSGI/Tema_2/Tabla_Horario/Horario.HTML" target="_blank">Horario</a></li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Tema 3 -->
+            <div class="recuadro">
+                <section>
+                    <h3>TEMA 3: (Nombre del Tema 3)</h3>
+                    <ul>
+                        <li><a href="Temario_LMSGI/Tema_3/bootstrap/bootstrap_1.html" target="_blank">Bootstrap</a></li>
+                        <li><a href="Temario_LMSGI/Tema_3/Calculadora/item.html" target="_blank">Calculadora</a></li>
+                        <li><a href="Temario_LMSGI/Tema_3/JavaScript/4.1.html" target="_blank">Ejercicio 4.1</a></li>
+                        <li><a href="Temario_LMSGI/Tema_3/JavaScript/4.2.html" target="_blank">Ejercicio 4.2</a></li>
+
+                    </ul>
+                </section>
+            </div>
         </div>
 
-        <!-- Tema 2 -->
-        <div class="recuadro">
-            <section>
-                <h3>TEMA 2: HTML</h3>
-                <ul>
-                    <li><a href="Temario_LMSGI/Tema_2/LISTA/Lista.html" target="_blank">Listas</a></li>
-                    <li><a href="Temario_LMSGI/Tema_2/Tabla_Horario/Horario.HTML" target="_blank">Horario</a></li>
-                </ul>
-            </section>
-        </div>
-
-        <!-- Tema 3 -->
-        <div class="recuadro">
-            <section>
-                <h3>TEMA 3: (Nombre del Tema 3)</h3>
-                <!-- Aquí se agregarán los ejercicios del Tema 3 -->
-                <ul>
-                    <li><a href="Temario_LMSGI/Tema_3/bootstrap/bootstrap_1.html" target="_blank">bootstrap</a></li>
-                    <li><a href="Temario_LMSGI/Tema_3/Calculadora/item.html" target="_blank">Calculadora</a></li>
-                    <li><a href="Temario_LMSGI/Tema_3/JavaScript/Apartafo_1.js" target="_blank">Apartado_1.js</a></li>
-                    <li><a href="Temario_LMSGI/Tema_3/JavaScript/Apartado_2.js" target="_blank">Apartado_2.js</a></li>
-
-
-                    <!-- Puedes ir agregando más enlaces cuando tengas los códigos del Tema 3 -->
-                </ul>
-            </section>
-        </div>
-
+        <footer>
+            <b>mmordoe685@g.educaand.es</b> | <b>Act. 06/03/2025</b>
+        </footer>
     </div>
-
-    <footer>
-        <b>mmordoe685@g.educaand.es</b> | <b>22/02/2025</b>
-    </footer>
 
 </body>
 

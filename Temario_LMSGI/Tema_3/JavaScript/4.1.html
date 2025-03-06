@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicios JavaScript</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4b3f72;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        .container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .output {
+            margin-top: 20px;
+            background-color: #f7f9fc;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: left;
+        }
+
+        .output p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ejercicios de JavaScript</h1>
+
+    <div class="container">
+        <h2>Sumatorio de 100 Números Aleatorios</h2>
+        <button onclick="sumarNumeros()">Calcular suma de 100 números</button>
+        <div id="resultadoSuma" class="output"></div>
+    </div>
+
+    <div class="container">
+        <h2>Contar Pares e Impares</h2>
+        <button onclick="contarParesImpares()">Ingresar números</button>
+        <div id="resultadoParImpar" class="output"></div>
+    </div>
+
+    <script>
+        // Ejercicio 1: Calcular suma de 100 números aleatorios
+        function sumarNumeros() {
+            let numeros = [];
+            for (let i = 0; i < 100; i++) {
+                numeros.push(Math.floor(Math.random() * 100) + 1);
+            }
+
+            let suma = numeros.reduce((acumulador, valor) => acumulador + valor, 0);
+            document.getElementById('resultadoSuma').innerHTML = "<p>El sumatorio de todos los números es: " + suma + "</p>";
+        }
+
+        // Ejercicio 2: Contar números pares e impares ingresados por el usuario
+        function contarParesImpares() {
+            let numeros = [];
+            let par = 0;
+            let impar = 0;
+
+            while (true) {
+                let num = prompt("Ingrese un número (teclea 0 o un valor no numérico para finalizar):");
+
+                if (isNaN(num) || num == 0) {
+                    break;
+                }
+
+                num = parseInt(num); // Convertir la entrada a número entero
+                numeros.push(num);
+
+                if (num % 2 === 0) {
+                    par++;
+                } else {
+                    impar++;
+                }
+            }
+
+            let resultado = "Los números ingresados son: " + numeros.join(", ") + "<br>";
+            resultado += "Hay " + par + " números pares y " + impar + " números impares.";
+            document.getElementById('resultadoParImpar').innerHTML = resultado;
+        }
+    </script>
+
+</body>
+
+</html>

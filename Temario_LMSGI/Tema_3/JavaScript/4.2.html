@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocultar y Mostrar Párrafos</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e; /* Fondo oscuro elegante */
+            font-family: 'Roboto', sans-serif; /* Fuente moderna */
+            color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #2b2b2b; /* Fondo del contenedor más claro */
+            border-radius: 20px; /* Bordes redondeados */
+            padding: 30px;
+            width: 450px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra pronunciada */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+
+        p {
+            background-color: #3a3a3a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            transition: background-color 0.3s ease; /* Transición suave */
+        }
+
+        p:hover {
+            background-color: #4a4a4a; /* Cambio de color al pasar el ratón */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            background-color: #ff6f61; /* Color de los botones: coral */
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            margin: 10px 5px;
+            border-radius: 30px; /* Bordes redondeados de botones */
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Animaciones */
+            box-shadow: 0 5px 15px rgba(255, 111, 97, 0.4); /* Sombra suave */
+        }
+
+        button:hover {
+            background-color: #ff5a49; /* Color más oscuro al pasar el ratón */
+            transform: translateY(-3px); /* Levanta el botón al hacer hover */
+            box-shadow: 0 8px 20px rgba(255, 111, 97, 0.6); /* Sombra más grande */
+        }
+
+        button:active {
+            transform: translateY(0); /* Vuelve a su posición al hacer click */
+            box-shadow: 0 5px 15px rgba(255, 111, 97, 0.4); /* Sombra original */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ocultar y Mostrar Párrafos</h1>
+
+        <!-- Párrafos -->
+        <p class="impar">Párrafo 1</p>
+        <p class="par">Párrafo 2</p>
+        <p class="impar">Párrafo 3</p>
+        <p class="par">Párrafo 4</p>
+        <p class="impar">Párrafo 5</p>
+        <p class="par">Párrafo 6</p>
+
+        <!-- Botones -->
+        <button id="ocultarPares">Ocultar pares</button>
+        <button id="ocultarImpares">Ocultar impares</button>
+        <button id="mostrarPares">Mostrar pares</button>
+        <button id="mostrarImpares">Mostrar impares</button>
+    </div>
+
+    <script>
+        // Función para ocultar elementos por clase
+        function ocultar(clase) {
+            const elementos = document.querySelectorAll('.' + clase);
+            elementos.forEach(elemento => {
+                elemento.classList.add('hidden');
+            });
+        }
+
+        // Función para mostrar elementos por clase
+        function mostrar(clase) {
+            const elementos = document.querySelectorAll('.' + clase);
+            elementos.forEach(elemento => {
+                elemento.classList.remove('hidden');
+            });
+        }
+
+        // Eventos para los botones
+        document.getElementById('ocultarPares').addEventListener('click', () => ocultar('par'));
+        document.getElementById('ocultarImpares').addEventListener('click', () => ocultar('impar'));
+        document.getElementById('mostrarPares').addEventListener('click', () => mostrar('par'));
+        document.getElementById('mostrarImpares').addEventListener('click', () => mostrar('impar'));
+    </script>
+</body>
+</html>

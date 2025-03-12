@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <meta htto-equiv="Content-Type" content="text/html; caharset=UTF-8"/>
+    <title>Oposiciones 2018</title>
+    <script type = "text/javascript">
+    </script>
+</head>
+
+<body>
+    <p id="contenido_1">textotextotextotextotextotextotextotextotexto
+    textotextotextotextotextotextotextotextotextotextotextotextotexto
+    textotextotextotextotextotextotextotextotextotextotextotextotexto
+    </p>
+    <a id="enlace_1" href="#">Ocultar contenido</a>
+
+    <br/>
+
+    <p id="contenido_2">textotextotextotextotextotextotextotext
+    textotextotextotextotextotextotextotextotextotextotextotextotexto
+    textotextotextotextotextotextotextotextotextotextotextotextotexto
+    </p>
+    <a id="enlace_2" href="#">Ocultar contenido</a>
+
+    <br/>
+
+    <p id="contenido_3">textotextotextotextotextotextotextotext
+    textotextotextotextotextotextotextotextotextotextotextotextotexto
+    textotextotextotextotextotextotextotextotextotextotextotextotexto
+    </p>
+    <a id="enlace_3" href="#">Ocultar contenido</a>
+
+</body>
+</html>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    function muestraOculta(id) {
+        let parrafo = document.getElementById("contenido_" + id);
+        let enlace = document.getElementById("enlace_" + id);
+        
+        if (parrafo.style.display === "none") {
+            parrafo.style.display = "block";
+            enlace.textContent = "Ocultar contenido";
+        } else {
+            parrafo.style.display = "none";
+            enlace.textContent = "Mostrar contenido";
+        }
+    }
+
+    for (let i = 1; i <= 3; i++) {
+        document.getElementById("enlace_" + i).addEventListener("click", function (event) {
+            event.preventDefault(); 
+            muestraOculta(i);
+        });
+    }
+});
+
+</script>

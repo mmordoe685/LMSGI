@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Matrícula Flexible</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f6fa;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      padding: 40px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px 40px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #2f3640;
+    }
+
+    fieldset {
+      border: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    legend {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #353b48;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #2d3436;
+    }
+
+    input[type="number"] {
+      width: 80px;
+      padding: 5px;
+      border: 1px solid #dcdde1;
+      border-radius: 4px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    button {
+      background-color: #0984e3;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #74b9ff;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #2d3436;
+      background-color: #ecf0f1;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .error {
+      background-color: #ffe6e6;
+      color: #c0392b;
+      border: 1px solid #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Formulario de Matrícula</h2>
+
+    <form id="formulario">
+      <fieldset>
+        <legend>Materias</legend>
+        <label><input type="checkbox" name="materia" value="mat1"> Matemáticas I</label>
+        <label><input type="checkbox" name="materia" value="his"> Historia</label>
+        <label><input type="checkbox" name="materia" value="mat2"> Matemáticas II</label>
+        <label><input type="checkbox" name="materia" value="fis"> Física</label>
+      </fieldset>
+
+      <label>
+        Horas semanales:
+        <input type="number" id="horas" value="0" min="0">
+      </label><br><br>
+
+      <label><input type="checkbox" id="antiguo"> Soy antiguo alumno</label>
+      <label><input type="checkbox" id="beca"> Tengo beca</label><br><br>
+
+      <button type="button" onclick="calcularPrecio()">Calcular precio</button>
+    </form>
+
+    <div id="resultado" class="resultado" style="display:none;"></div>
+  </div>
+
+  <script>
+    function calcularPrecio() {
+      const materias = Array.from(document.querySelectorAll('input[name="materia"]:checked')).map(el => el.value);
+      const horas = parseInt(document.getElementById("horas").value, 10);
+      const esAntiguo = document.getElementById("antiguo").checked;
+      const tieneBeca = document.getElementById("beca").checked;
+      const resultadoDiv = document.getElementById("resultado");
+
+      resultadoDiv.classList.remove("error");
+      resultadoDiv.style.display = "block";
+
+      // Validación
+      if (materias.includes("mat2") && !materias.includes("mat1")) {
+        resultadoDiv.classList.add("error");
+        resultadoDiv.innerHTML = "❌ Error: No puedes matricularte de Matemáticas II sin haber elegido Matemáticas I.";
+        return;
+      }
+
+      let precioBase = horas * 20;
+
+      if (esAntiguo) {
+        precioBase *= 0.65; // 35% de descuento
+      }
+
+      const precioConBeca = tieneBeca ? precioBase * 0.2 : null;
+
+      resultadoDiv.classList.remove("error");
+
+      resultadoDiv.innerHTML = `
+        ✅ <strong>Total mensual:</strong> ${precioBase.toFixed(2)} €<br>
+        ${tieneBeca ? `🎓 <strong>Con beca:</strong> ${precioConBeca.toFixed(2)} €` : ''}
+      `;
+    }
+  </script>
+
+</body>
+</html>

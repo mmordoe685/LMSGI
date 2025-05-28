@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nota Real Bonita™</title>
+  <style>
+    /* Fondo pastel animado */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      animation: backgroundMove 10s infinite alternate;
+    }
+
+    @keyframes backgroundMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 25px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+      padding: 35px;
+      width: 90%;
+      max-width: 420px;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: #333;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .timer {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      text-align: left;
+      color: #555;
+      font-weight: 500;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      transition: all 0.2s;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(to right, #f7971e, #ffd200);
+      border: none;
+      border-radius: 15px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ffd200, #f7971e);
+      transform: scale(1.03);
+    }
+
+    .result {
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .condonado {
+      color: #27ae60;
+      font-size: 15px;
+      margin-top: 5px;
+    }
+
+    .error {
+      color: #e74c3c;
+      font-weight: 500;
+      font-size: 15px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>📚 Calculadora de Nota Real</h2>
+  <div class="timer" id="timer">⏱ Tiempo: 0 segundos</div>
+
+  <label for="aciertos">✅ Aciertos:</label>
+  <input type="number" id="aciertos" min="0" max="27" placeholder="Ej: 20">
+
+  <label for="fallos">❌ Fallos:</label>
+  <input type="number" id="fallos" min="0" max="27" placeholder="Ej: 7">
+
+  <label for="penalizacion">🛠 Penalización por fallo:</label>
+  <select id="penalizacion">
+    <option value="0">Sin resta de fallos</option>
+    <option value="0.1">Cada fallo -0,1</option>
+    <option value="0.2">Cada fallo -0,2</option>
+    <option value="0.3">Cada fallo -0,3</option>
+  </select>
+
+  <button onclick="calcularNota()">✨ Calcular Nota</button>
+
+  <div class="result" id="resultado"></div>
+</div>
+
+<script>
+  let startTime = Date.now();
+
+  const timer = document.getElementById("timer");
+  setInterval(() => {
+    const seconds = Math.floor((Date.now() - startTime) / 1000);
+    timer.textContent = `⏱ Tiempo: ${seconds} segundos`;
+  }, 1000);
+
+  function calcularNota() {
+    const aciertos = parseInt(document.getElementById('aciertos').value);
+    const fallos = parseInt(document.getElementById('fallos').value);
+    const penalizacionOriginal = parseFloat(document.getElementById('penalizacion').value);
+    const resultado = document.getElementById('resultado');
+    const tiempo = Math.floor((Date.now() - startTime) / 1000);
+
+    // Validación básica
+    if (isNaN(aciertos) || isNaN(fallos) || aciertos + fallos > 27) {
+      resultado.innerHTML = "<div class='error'>🚫 Verifica los datos: aciertos + fallos debe ser ≤ 27.</div>";
+      return;
+    }
+
+    // Si lo hace en menos de 60 segundos, condonamos fallos
+    let penalizacionUsada = penalizacionOriginal;
+    let condonado = false;
+    if (tiempo <= 60) {
+      penalizacionUsada = 0;
+      condonado = true;
+    }
+
+    const notaBase = (aciertos / 27) * 10;
+    const notaFinal = Math.max(0, notaBase - (fallos * penalizacionUsada));
+
+    resultado.innerHTML = `
+      📘 Nota final: <strong>${notaFinal.toFixed(2)}</strong>
+      ${condonado ? "<div class='condonado'>✅ Fallos condonados por rapidez ⚡</div>" : ""}
+    `;
+  }
+</script>
+
+</body>
+</html>
